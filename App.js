@@ -1,11 +1,3 @@
-/* 
-<div id="parent">
-    <div id="child">
-            <h1>Master mind</h1>
-    </div>
-</div> 
-*/
-
 // Create a nested React element with a div as the parent element and an ID of "parent"
 const heading = React.createElement(
   "div",
