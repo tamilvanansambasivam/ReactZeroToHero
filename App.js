@@ -1,15 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const heading = React.createElement(
-  "div",
-  { id: "parent" },
-  // Create a child div with an ID of "child" and a nested h1 element with the text "hi im h1"
-  React.createElement("h1", { id: "child" }, "hello")
-);
+// ReactcreateElement => Object => htmlElement (render)
 
-//  Create a React root and attach it to the DOM element with the ID "root"
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const heading = React.createElement("h1", { className: "heading" }, "Hello");
+console.log(heading);
 
-//  Render the previously created React element (heading) within the React root
-root.render(heading);
+//JSX is html like syntax ( Not HTML inside the JS)
+// JSX -> ReactcreateElement => Object => htmlElement (render)
+const heading2 = <h1 className="heading">Hello</h1>;
+console.log(heading);
+
+ReactDOM.createRoot(document.getElementById("root")).render(heading);
