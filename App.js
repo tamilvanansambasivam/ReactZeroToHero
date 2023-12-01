@@ -1,18 +1,11 @@
-// Create a nested React element with a div as the parent element and an ID of "parent"
+import React from "react";
+import ReactDOM from "react-dom/client";
+
 const heading = React.createElement(
   "div",
   { id: "parent" },
   // Create a child div with an ID of "child" and a nested h1 element with the text "hi im h1"
-  [
-    React.createElement("div", { id: "child" }, [
-      React.createElement("h1", {}, "I'm h1"),
-      React.createElement("h1", {}, "I' m h1 sibling"),
-    ]),
-    React.createElement("div", { id: "child2" }, [
-      React.createElement("h1", {}, "I'm h1"),
-      React.createElement("h1", {}, "I' m h1 sibling"),
-    ]),
-  ]
+  React.createElement("h1", { id: "child" }, "hello")
 );
 
 //  Create a React root and attach it to the DOM element with the ID "root"
