@@ -11,11 +11,16 @@ const heading = React.createElement(
   "div",
   { id: "parent" },
   // Create a child div with an ID of "child" and a nested h1 element with the text "hi im h1"
-  React.createElement(
-    "div",
-    { id: "child" },
-    React.createElement("h1", {}, "hi im h1")
-  )
+  [
+    React.createElement("div", { id: "child" }, [
+      React.createElement("h1", {}, "I'm h1"),
+      React.createElement("h1", {}, "I' m h1 sibling"),
+    ]),
+    React.createElement("div", { id: "child2" }, [
+      React.createElement("h1", {}, "I'm h1"),
+      React.createElement("h1", {}, "I' m h1 sibling"),
+    ]),
+  ]
 );
 
 //  Create a React root and attach it to the DOM element with the ID "root"
