@@ -1,14 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-// ReactcreateElement => Object => htmlElement (render)
+const heading = React.createElement("h1", { id: "heading" }, "Heading");
 
-const heading = React.createElement("h1", { className: "heading" }, "Hello");
-console.log(heading);
+// JSX => Babel transpile it into React.CreateElement => object => HTMLElement (render)
+const jsxheading = <h1 id="heading">Heading</h1>;
 
-//JSX is html like syntax ( Not HTML inside the JS)
-// JSX -> ReactcreateElement => Object => htmlElement (render)
-const heading2 = <h1 className="heading">Hello</h1>;
-console.log(heading);
-
-ReactDOM.createRoot(document.getElementById("root")).render(heading);
+ReactDOM.createRoot(document.getElementById("root")).render(jsxheading);
