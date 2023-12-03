@@ -1,26 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import Body from "./Components/Body";
+import Footer from "./Components/Footer";
+import Header from "./Components/Header";
 
-const heading = React.createElement("h1", { id: "heading" }, "Heading");
-
-// JSX => Babel transpile it into React.CreateElement => object => HTMLElement (render)
-const jsxheading = <h1 id="heading">Heading</h1>;
-const AnotherComponent = () => (
-  <>
-    <h1>This is another component</h1>
-  </>
-);
-
-// When you have a React component nested inside another React component, it is referred to as "component composition".
-
-const HeadingComponent = () => {
+const App = () => {
   return (
     <div>
-      <h1>Heading Component</h1>
-      <AnotherComponent />
+      <Header />
+      <Body />
+      <Footer />
     </div>
   );
 };
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <HeadingComponent />
-);
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
